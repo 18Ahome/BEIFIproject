@@ -1,0 +1,139 @@
+/* src/components/signup.module.css */
+
+.container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .leftPanel {
+    align-self: center;
+    justify-self: center;
+    height: 820px;
+    width: 1307px;
+    background: linear-gradient(to bottom right, #9dfc00, #00ff92);
+    border-radius: 40px;
+    margin-left: 60px;
+  }
+  
+  .backgroundImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 40px;
+  }
+  
+  .backgroundImage2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    position: absolute;
+    top: 0px;
+    left: 40px;
+    }
+  
+    .loginblocks{
+      width: 380px;
+      height: 90%;
+      align-self: center;
+      position: absolute;
+      top: 20px;
+      left: 80px;
+      }
+  
+  .signupBox {
+    width: 960px;
+    height: 750px;
+    align-self: center;
+    position: absolute;    
+    flex: 1;
+    background-color: #000000;
+    border-radius: 70px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    margin:500px;
+  }
+  
+  .title {
+    font-size: 90px;
+    background:-webkit-linear-gradient(#FF8C00, #F7EA40);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-top: -20px;
+  }
+
+  .form {
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+  
+  .inputRow {
+    display: flex;
+    margin-left: 50px;
+    margin-top: 100px;
+    margin-bottom: 40px;
+  }
+  
+  .inputContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: -20px;
+    margin-top: -80px;
+    margin-bottom: 30px;
+  }
+  
+  .inputContainer:last-child {
+    margin-right: 0;
+  }
+  
+  .inputContainer label {
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-size: 20px;
+  }
+  
+  .input {
+    margin-left: 10px;
+    height: 60px;
+    width: 80%;
+    padding: 10px;
+    background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)) padding-box,
+              linear-gradient(to right, #FF3D00, #FFC20A) border-box;
+  border-radius: 40px;
+  border: 3px solid transparent;
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  .button {
+    width: 50%;
+    padding: 10px;
+    background: linear-gradient(to right, #FFC20A, #FF3D00);
+    border: none;
+    border-radius: 100px;
+    color: #000;
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 25%;
+  }
+  
+  .signInFooter {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  .loginLink {
+    color: #ffc107;
+  margin-left: 5px;
+  font-weight: 900;
+  background: -webkit-linear-gradient(#DBFF00, #00FF25);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+  
