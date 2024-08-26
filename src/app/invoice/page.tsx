@@ -6,7 +6,7 @@ import profile from '@/assets/img/perfilimage.jpg';
 import pencil from '@/assets/img/Pencil.png';
 import Link from "next/link";
 
-export default function Profile() {
+export default function Invoice() {
   return (
     <div className={styles.container}>
       
@@ -38,48 +38,47 @@ export default function Profile() {
 
 
       <div className={styles.profileBox}>
-        <h1 className={styles.title}>My Profile</h1>
+        <h1 className={styles.title}>Invoice Data</h1>
         
         <form>
-          <div className={styles.formContainer}>
-           <div className={styles.inputContainer}>
-            <label>First Name</label>
+        <div className={styles.formContainer}>
+          <div className={styles.inputContainer}>
+            <label>Legal Name</label>
             <div className={styles.inputWrapper}>
               <input className={styles.input} />
             </div>
-           </div>
-           <div className={styles.inputContainer}>
-            <label>Last Name</label>
+          </div>
+          <div className={styles.inputContainer}>
+            <label>Tax Regime</label>
             <div className={styles.inputWrapper}>
               <input className={styles.input} />
             </div>
-           </div>
-           <div className={styles.inputContainer}>
-            <label>Organization</label>
+          </div>
+          <div className={styles.inputContainer}>
+            <label>RFC</label>
             <div className={styles.inputWrapper}>
               <input className={styles.input} />
             </div>
-           </div>
-           <div className={styles.inputContainer}>
-            <label>ORCID</label>
+          </div>
+          <div className={styles.inputContainer}>
+            <label>Adress</label>
             <div className={styles.inputWrapper}>
               <input className={styles.input} />
             </div>
-           </div>
-           <div className={styles.inputContainer}>
-            <label>Email</label>
-            <div className={styles.inputWrapper}>
-              <input className={styles.input} />
-            </div>
-           </div>
-           <div className={styles.inputContainer}>
-            <label>Password</label>
-            <div className={styles.inputWrapper}>
-              <input className={styles.input} />
-            </div>
-           </div> 
           </div>
           
+        <div className={styles.inputContainer}>
+          <label>Proof of Tax Status</label>
+          <div className={styles.fileUpload}>
+            <label className={styles.uploadButton} htmlFor="file">
+              Upload file
+            </label>
+            <input type="file" id="file" className={styles.fileInput} />
+            <p className={styles.dragDropText}>or drag and drop here</p>
+          </div>
+        </div>
+        <p className={styles.fileNote}>PDF format not larger than 30MB</p>
+      </div>    
           
         <Link href="">
         <div className={styles.inputRow}>
@@ -87,6 +86,7 @@ export default function Profile() {
           <button type="submit" className={styles.button2}>Save</button>
         </div>
         </Link>
+
     </form>
      
         

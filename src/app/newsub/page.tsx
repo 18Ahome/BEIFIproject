@@ -1,6 +1,7 @@
 import Image from "next/image";
-import styles from "@/app/main.module.css";
+import styles from "@/app/newsub.module.css";
 import Link from "next/link";
+import background from '@/assets/img/orangebackground.png';
 import background2 from '@/assets/img/gradientback.png';
 import icasst from '@/assets/img/ICASST LOGO.png';
 import cda from '@/assets/img/CDA 2.png'
@@ -10,19 +11,14 @@ import profileicon from '@/assets/img/Profile.png'
 import newsub from '@/assets/img/newsub.png'
 import help from '@/assets/img/Help.png';
 import Logout from '@/assets/img/logout.png'
-import ver from '@/assets/img/ver.png'
 import edit from '@/assets/img/editar.png';
 import close from '@/assets/img/eliminar.png'
-import neww from '@/assets/img/neww.png'
 
-export default function main() {
+
+export default function NewSubmission() {
   return (
     <div className={styles.container}>
         <Image src={background2} className={styles.backgroundImage2} alt="Background2"></Image>
-        <div className={styles.advice}>
-            <h1 className={styles.welcome}>Welcome</h1>
-            <p className={styles.advicetext}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend sed sem non ullamcorper. Donec fermentum gravida dui sit amet fringilla. Suspendisse consequat rutrum semper. Phasellus libero dolor, sagittis efficitur eleifend id, rhoncus ac ex.</p>
-        </div>
       <div className={styles.leftPanel}>
         <Image src={icasst} className={styles.icasstlogo} alt="IcasstLogo"></Image>
         <Image src={cda} className={styles.cdalogo} alt="cdaLogo"></Image>
@@ -69,94 +65,75 @@ export default function main() {
 
       </div>
       <div className={styles.listboxtitle}>
-        <h1 className={styles.title}>My Submissions</h1>
+        <h1 className={styles.title}>New Submission</h1>
       </div>
       
         <div className={styles.listbox}>
-      <table className={styles.submissionsTable}>
-            <thead>
+         <Image src={background} alt="background" className={styles.imgbox}/>
+         <div className={styles.listboxsubtitle}>
+          <h2 className={styles.subtitle}>Add any co-authors</h2>
+         </div>
+          <p className={styles.description}>
+          Please proceed by entering the general information for each collaborator. This includes their first names, last names, email address, organization or institution of origin, and ORCID. Ensure that all information is accurate and complete to facilitate smooth collaboration and proper attribution in the publication.
+          </p>
+
+          <div className={styles.formRow}>
+          <input className={styles.input} placeholder="First Names" />
+          <input className={styles.input} placeholder="Last Names" />
+          </div>
+
+          <div className={styles.formRow}>
+          <input className={styles.input} placeholder="Email" />
+          <input className={styles.input} placeholder="Organization" />
+          </div>
+          
+          <div className={styles.formRow}>
+          <input className={styles.input} placeholder="ORCID" />
+          <button className={styles.button}>Enter</button>
+          </div>
+
+          <table className={styles.submissionsTable}>
+            <thead className={styles.tableHeader}>
               <tr className={styles.categories}>
-                <th className={styles.radius1}>Paper Identifier</th>
-                <th>Category</th>
-                <th>Status</th>
-                <th>Submit Date</th>
+                <th className={styles.radius1}>First Names</th>
+                <th className={styles.column2}>Last Names</th>
+                <th>Email</th>
+                <th>Organization</th>
+                <th>ORCID</th>
                 <th className={styles.optioncolumn}>Options</th>
               </tr>
             </thead>
 
-            <tbody>
+            <tbody className={styles.body}>
               
               <tr className={styles.categoriesb}>
                 <td className={styles.radius1}>XXXXXXXXXX1</td>
                 <td>Astrobiology</td>
                 <td>Not Released</td>
                 <td>Now</td>
+                <td>Now</td>
                 <td className={styles.radius2}>
                 <div className={styles.buttoncontent}>
-                  <Link href="">
-                  <div className={styles.buttonv}>
-                    <Image src={ver} alt="View Icon" className={styles.optionIconv} />
-                  </div>
-                  </Link>
-                  
-                  <Link href="">
-                  <div className={styles.buttone}>
-                    <Image src={edit} alt="Edit Icon" className={styles.optionIcone} />
-                  </div>
-                  </Link>
-                  
-                  <Link href="">
-                  <div className={styles.buttond}>
-                    <Image src={close} alt="Delete Icon" className={styles.optionIcond} />
-                  </div>
-                  </Link>
-                  
-                </div>
-                </td>
-              </tr>
               
-              <tr className={styles.categoriesb}>
-                <td className={styles.radius1}>XXXXXXXXXX2</td>
-                <td>Geointelligence</td>
-                <td>Not Released</td>
-                <td >Today</td>
-                <td className={styles.radius2}>
-                <div className={styles.buttoncontent}>
-                  <Link href="">
-                  <div className={styles.buttonv}>
-                    <Image src={ver} alt="View Icon" className={styles.optionIconv} />
-                  </div>
-                  </Link>
-                  
                   <Link href="">
                   <div className={styles.buttone}>
-                    <Image src={edit} alt="Edit Icon" className={styles.optionIcone} />
+                    <Image src={""} alt="Edit Icon" className={styles.optionIcone} />
                   </div>
                   </Link>
                   
                   <Link href="">
                   <div className={styles.buttond}>
-                    <Image src={close} alt="Delete Icon" className={styles.optionIcond} />
+                    <Image src={""} alt="Delete Icon" className={styles.optionIcond} />
                   </div>
                   </Link>
                   
                 </div>
-                
                 </td>
               </tr>
             
             </tbody>
           </table>
-
-          <Link href="/newsub">
-            <button className={styles.newSubmissionButton}>
-            <Image src={neww} alt="New" className={styles.newicon} />
-              <h1 className={styles.tb}>New Submission</h1>
-            </button>
-          </Link>
-
-      </div>
+        </div>
     </div>
   );
 }
-

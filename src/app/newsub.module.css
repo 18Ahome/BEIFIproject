@@ -1,4 +1,4 @@
-/* src/components/main.module.css */
+/* src/components/newsub.module.css */
 
 .container {
     display: flex;
@@ -122,96 +122,171 @@
     z-index: -1;
     }
 
-  .advice{
-    position: absolute;
-    width: 970px;
-    height: 180px;
-    background: rgba(0, 0, 0, 0.6);
-    margin-left: 380px;
-    margin-top: 30px;
-    border-radius: 20px;
-  }
-
-  .welcome{
-    font-size: 50px;
-    background:-webkit-linear-gradient(#FFC20A, #FF3D00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-top: 10px;
-    margin-left: 20px;
-  }
-
-  .advicetext{
-    color: #ffffff;
-    font-size: 20px;
-    margin-left: 20px;
-    margin-right: 10px;
-    font-weight: 600;
-  }
-
   .listboxtitle{
     width: 1130px;
     height: 80px;
-    background: linear-gradient(to right, #00FF25, #DBFF00);
+    background: linear-gradient(to top, #00FF25, #DBFF00);
     margin-left: 30px;
-    margin-top: 235px;
+    margin-top: 55px;
     border-radius: 39px 39px 0 0;
     z-index: 1;
   }
 
-  .listbox {
-    width: 1130px;
-    height: 600px;
-    align-self: center;
-    position: absolute;    
-    flex: 1;
-    background-color: rgba(30, 38, 42, 0.5);
-    border-radius: 39px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #fff;
-    margin:380px;
-    margin-bottom: 180px;
-  }
-  
   .title {
-    font-size:40px;
+    font-size: 40px;
     color: black;
     margin-top: 15px;
     margin-left: 30px;
   }
+
+  .listbox {
+    width: 1130px;
+    height: 700px;
+    align-self: center;
+    position: absolute;    
+    
+    border-radius: 0 0 39px 39px ;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 107px;
+    margin-left: 380px;
+  }
   
-  .submissionsTable{
-  width: 99%;
-  margin-left: 5px;
-  margin-top: -190px;
-  border-spacing: 0px 15px ;
+  .imgbox {
+    width: 1130px;
+    height: 700px;
+    align-self: center;
+    position: absolute;  
+    z-index: -1;  
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-.submissionsTable th,
-.submissionsTable td {
-  padding: 15px;
-  text-align: left;
-  color: #fff;
-  text-align: center;
-  
-}
+  .listboxsubtitle{
+    width: 1130px;
+    height: 65px;
+    background: #000;
+    margin-left: -20px;
+    margin-top: 0px;
+    z-index: 1;
+  }
 
-.categories{
-  background: linear-gradient(to left, #1e1e1edd, rgba(132, 132, 132, 0.3), #1e1e1edd);
+  .listboxsubtitle::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 460px;
+  width: 60px;
+  height: 65px;
+  /*border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-left: 40px solid #FF8C00;*/
+  background: linear-gradient(to bottom, #FF8C00,#FF0000);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  }
   
-}
 
-.categoriesb{
-  background: #101010;
-  height: 20px;
+  .subtitle {
+    font-size: 28px;
+    color: #000000;
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 460px;
+    height: 65px;
+    padding: 15px 15px 0px 30px;
+    background: linear-gradient(to bottom, #FF8C00, #FF0000);
+  }
   
-}
+  .description {
+    font-size: 16px;
+    color: #000000;
+    margin-top: 25px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-weight:700;
+  }
+  
+  .formRow {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 30px;
+  }
+  
+  .input {
+    width: 45%;
+    height: 50px;
+    padding: 15px;
+    border-radius: 40px;
+    border: 2px solid #00FF25;
+    background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)) padding-box,
+                linear-gradient(to right, #00FF25, #DBFF00) border-box;
+    border: 3px solid transparent;
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .input::placeholder {
+    color: #00FF25;
+    opacity: 1;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  
+  .button {
+    width: 460px;
+    height: 50px;
+    padding-top: -10px;
+    background: linear-gradient(to right, #00FF25, #DBFF00);
+    border: none;
+    border-radius: 100px;
+    color: #000;
+    font-size: 34px;
+    font-weight: bolder;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .submissionsTable {
+    margin-top: 0px;
+    padding: 10px;
+    border-radius: 20px;
+    border-spacing: 0px 15px ;
+    text-align: center;
+  }
+  
+  .tableHeader {
+    background: linear-gradient(to right, #00FF25, #DBFF00);
+    padding-left: 10px;       
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 45px;
+    height: 40px;
+  }
+
+  .body{
+    width: 1010px;
+    height: 210px;
+    border-radius: 45px;
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .categoriesb{
+    background-color: #101010;
+    height: 10px;
+    width: fit-content;
+  }
 
 .radius1{
   border-radius: 45px 0 0 45px;
+  margin-left: -20px;
+
 }
 
 .radius2{
@@ -228,31 +303,25 @@
 
 .optioncolumn{
   border-radius: 0 45px 45px 0;
-  width: 70px;
+
 }
 
-.submissionsTable th {
-  color: #00FF25;
-  font-size: 20px;
-}
 
 .submissionsTable td {
   font-size: 16px; 
 }
 
-.buttonv{
-  width: 46px;
-  height: 25px;
-  background: linear-gradient(to bottom, #FFC20A, #FFF500);
-  margin-right: 6px;
-  border-radius: 100px;
+.optionsIcons {
+  display: flex;
+  gap: 10px;
   align-content: center;
-  cursor: pointer;
+  justify-content: center;
 }
 
-.optionIconv{
-  width: 25px;
-  height: 24px;
+.icon {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
 }
 
 .buttone{
@@ -283,37 +352,4 @@
   width: 24px;
   height: 24px;
   
-}
-
-.newicon{
-  margin-right: 10px;
-  cursor: pointer;
-  width: 45px;
-  height: 45px;
-}
-
-.tb{
-  font-size: 25px;
-  color: #fff;
-  text-align: center;
-  font-weight: bold;
-  margin-top: 8px;
-}
-
-.newSubmissionButton {
-  position: absolute;
-  margin-left: 790px;
-  margin-top: 180px;
-  display: flex;
-  padding: 20px 20px ;
-  align-content: center;
-  justify-content: center;
-  background: linear-gradient(to bottom, #00FF25, #0A854F);
-  border: none;
-  border-radius: 100px;
-  cursor: pointer;
-}
-
-.newSubmissionButton:hover {
-  background-color: #ffffff;
 }
